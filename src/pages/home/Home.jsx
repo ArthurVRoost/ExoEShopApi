@@ -54,11 +54,13 @@ export default function Home() {
         </div>
          <div className="homeDiv1">
             <h2 className="homeTitre">Nos Produits les Mieux Notés</h2>
+            
             <div className="homeDiv2 ">
                 {products
                     .filter(product =>  product.rating.rate >= 4)
                     .map(product => (
                         <div key={product.id} className="homeDiv3">
+                            <Link className='link2' to='/produits'>
                             <div className="homeDiv4">
                             <img src={product.image} className="homeCardimg" alt={product.title} style={{ height: '200px', objectFit: 'contain' }}/>
                             
@@ -78,12 +80,18 @@ export default function Home() {
                                     <small className="homeCardRating">({product.rating.rate})</small>
                                 </div>
                                 </div>
+                                
                             </div>
+                            
                             </div>
+                            </Link>
                         </div>
+                        
                     ))
                 }
+                
             </div>
+            
         </div>
         <Footer/>
         </>

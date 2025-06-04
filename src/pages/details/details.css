@@ -30,4 +30,10 @@
     .retour{
         display: none;
     }
+    .divDetails{
+        width: 400px;
+    }
+    .detailsH1{
+        font-size: 20px;
+    }
 }
