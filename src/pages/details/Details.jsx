@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './details.css'
+import Nav from '../../components/nav/Nav';
+import Footer from '../../components/footer/Footer';
 export default function Details() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
@@ -22,6 +24,8 @@ export default function Details() {
     if (!product) return <div>Produit non trouvé</div>;
 
     return (
+        <>
+        <Nav/>
         <div>
             <h1>{product.title}</h1>
             <img src={product.image} alt={product.title} />
@@ -30,5 +34,7 @@ export default function Details() {
             <p>Catégorie: {product.category}</p>
             <p>Note: {product.rating.rate}/5</p>
         </div>
+        <Footer/>
+        </>
     );
 }

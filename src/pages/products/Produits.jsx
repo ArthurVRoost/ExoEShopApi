@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Nav from '../../components/nav/Nav';
+import Footer from '../../components/footer/Footer';
 
 export default function Produits() {
     const [products, setProducts] = useState([]);
@@ -28,6 +30,7 @@ export default function Produits() {
     
     return (
         <>
+            <Nav/>
             <div>
                 <h1>Tous nos produits</h1>
                 {products.map(product => (
@@ -44,6 +47,7 @@ export default function Produits() {
                     </div>
                 ))}
             </div>
+            <Footer/>
         </>
     )
 }

@@ -35,8 +35,8 @@ export default function Home() {
     return(
         <>
         <Nav/>
-        <div id="carouselExample" className="carousel slide" style={{backgroundColor:'white'}}>
-            <div className='carousel-inner'>
+        <div id="carouselExample" className="carousel slide " >
+            <div className='carousel-inner '>
                 {carouselProducts.map((product, index) => (
                     <div key={product.id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                         <img src={product.image} className="d-block w-100 imgCarou" alt={product.title} style={{ objectFit: 'contain' }}/> 
@@ -52,37 +52,29 @@ export default function Home() {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
-         <div className="">
-            <h2 className="">Nos Produits les Mieux Notés</h2>
-            <div className="row">
+         <div className="homeDiv1">
+            <h2 className="homeTitre">Nos Produits les Mieux Notés</h2>
+            <div className="homeDiv2 ">
                 {products
-                    .filter(product => product.rating && product.rating.rate >= 4)
+                    .filter(product =>  product.rating.rate >= 4)
                     .map(product => (
-                        <div key={product.id} className="">
-                            <div className="">
-                                <img 
-                                    src={product.image} 
-                                    className="" 
-                                    alt={product.title}
-                                    style={{ height: '200px', objectFit: 'contain' }}
-                                />
-                                <div className="">
-                                    <h5 className="">{product.title}</h5>
-                                    <p className="">{product.description}</p>
-                                    <div className="">
-                                        <div className="">
-                                            <span className="">{product.price}€</span>
-                                            <div className="">
-                                                <span className="">
+                        <div key={product.id} className="homeDiv3">
+                            <div className="homeDiv4">
+                                <img src={product.image} className="homeCardimg" alt={product.title} style={{ height: '200px', objectFit: 'contain' }}/>
+                                <div className="homeDiv5">
+                                    <h5 className="homeCardTitre">{product.title}</h5>
+                                    <p className="homeCardP">{product.description}</p>
+                                    <div className="homeDiv6">
+                                        <div className="homeDiv7">
+                                            <span className="homeCardPrix">{product.price}€</span>
+                                            <div className="homeDiv8">
+                                                <span className="text-warning etoiles">
                                                     {'★'.repeat(Math.floor(product.rating.rate))}
                                                     {'☆'.repeat(5 - Math.floor(product.rating.rate))}
                                                 </span>
-                                                <small className="">({product.rating.rate})</small>
+                                                <small className="homeCardRating">({product.rating.rate})</small>
                                             </div>
                                         </div>
-                                        <button className="">
-                                            Voir le produit
-                                        </button>
                                     </div>
                                 </div>
                             </div>

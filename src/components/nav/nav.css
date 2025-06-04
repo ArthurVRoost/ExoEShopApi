@@ -4,11 +4,17 @@
     color: white;
 }
 .navP{
-    font-size: 25px;
+    font-size: 22px;
+    color: black;
+    margin-top: 2%;
+    font-family: "Rubik";
+    font-style: italic;
 }
 .divNav{
     display: flex;
     justify-content: center;
     gap: 100px;
-    margin-top: 2%;
+    background-color: rgb(234, 232, 232);
+    align-items: center;
+    padding-top: 1%;
 }
