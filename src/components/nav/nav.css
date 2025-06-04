@@ -1,0 +1,14 @@
+.link{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.navP{
+    font-size: 25px;
+}
+.divNav{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 2%;
+}

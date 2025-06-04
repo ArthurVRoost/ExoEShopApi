@@ -1,0 +1,10 @@
+.imgCarou {
+  height: 400px !important;
+  object-fit: contain;
+}
+body{
+    background-color: grey!important; 
+}
+.carousel-control-next-icon,.carousel-control-prev-icon{
+    background-color: black !important;
+}
