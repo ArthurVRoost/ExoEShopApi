@@ -60,23 +60,25 @@ export default function Home() {
                     .map(product => (
                         <div key={product.id} className="homeDiv3">
                             <div className="homeDiv4">
-                                <img src={product.image} className="homeCardimg" alt={product.title} style={{ height: '200px', objectFit: 'contain' }}/>
-                                <div className="homeDiv5">
-                                    <h5 className="homeCardTitre">{product.title}</h5>
-                                    <p className="homeCardP">{product.description}</p>
-                                    <div className="homeDiv6">
-                                        <div className="homeDiv7">
-                                            <span className="homeCardPrix">{product.price}€</span>
-                                            <div className="homeDiv8">
-                                                <span className="text-warning etoiles">
-                                                    {'★'.repeat(Math.floor(product.rating.rate))}
-                                                    {'☆'.repeat(5 - Math.floor(product.rating.rate))}
-                                                </span>
-                                                <small className="homeCardRating">({product.rating.rate})</small>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <img src={product.image} className="homeCardimg" alt={product.title} style={{ height: '200px', objectFit: 'contain' }}/>
+                            
+                            <div className="homeContent">
+                                <h5 className="homeCardTitre">{product.title}</h5>
+                                <p className="homeCardP">{product.description}</p>
+                            </div>
+
+                            <div className="homeDiv6"> 
+                                <div className="homeDiv7">
+                                <span className="homeCardPrix">{product.price}€</span>
+                                <div className="homeDiv8">
+                                    <span className="text-warning">
+                                    {'★'.repeat(Math.floor(product.rating.rate))}
+                                    {'☆'.repeat(5 - Math.floor(product.rating.rate))}
+                                    </span>
+                                    <small className="homeCardRating">({product.rating.rate})</small>
                                 </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     ))

@@ -31,21 +31,26 @@ export default function Produits() {
     return (
         <>
             <Nav/>
-            <div>
-                <h1>Tous nos produits</h1>
-                {products.map(product => (
-                    <div key={product.id}>
-                        <h3>{product.title}</h3>
-                        <img src={product.image} alt={product.title} />
-                        <p>{product.description}</p>
-                        <p>Prix: {product.price}€</p>
-                        <p>Catégorie: {product.category}</p>
-                        <p>Note: {product.rating.rate}/5 ({product.rating.count} avis)</p>
-                        <Link to={`/produit/${product.id}`}>
-                            <button>Voir les détails</button>
-                        </Link>
+            <div className='divProduits'>
+                <h1 className='prodtuisTitre'>Tous nos produits</h1>
+                <div className='test'>
+                    {products.map(product => (
+                    <div className='produitsDiv1' key={product.id}>
+                        <h3 className='produitsH3'>{product.title}</h3>
+                        <img className='produitsImg' src={product.image} alt={product.title} style={{ height: '200px', objectFit: 'contain' }} />
+
+                        <div className="produitsContentBas">
+                            <p className='produitsP1'>Prix: {product.price}€</p>
+                            <p className='produitsP2'>Catégorie: {product.category}</p>
+                            <p className='produitsP3'>Note: <span className='text-warning'>{product.rating.rate}/5</span> ({product.rating.count} avis)</p>
+                            <Link to={`/produit/${product.id}`}>
+                            <button className='produitsBtn'>Voir les détails</button>
+                            </Link>
+                        </div>
                     </div>
                 ))}
+                </div>
+                
             </div>
             <Footer/>
         </>

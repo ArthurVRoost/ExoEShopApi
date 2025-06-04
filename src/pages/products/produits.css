@@ -1,0 +1,52 @@
+.prodtuisTitre{
+    font-family: "Rubik";
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    font-style: italic;
+    margin-top: 3%;
+}
+.test{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+.produitsDiv1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 430px;
+    text-align: center;
+    height: 520px;
+    padding: 2%;
+    box-shadow: 2px 2px 17px 5px rgba(255,255,255,0.75);
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+.produitsDiv1:hover{
+    transform: scale(1.05);
+}
+.produitsH3{
+    font-size: 20px;
+}
+.produitsBtn{
+    border: none;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin-top: auto;
+}
+.produitsBtn:hover{
+    background-color: grey;
+    color: black;
+}
+.produitsContentBas {
+  margin-top: auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -37,6 +37,21 @@ body{
     gap: 30px;
     justify-content: center;
 }
+.homeContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.homeDiv6 {
+  margin-top: auto; 
+}
+
+.homeCardimg {
+  height: 200px;
+  object-fit: contain;
+}
 .homeDiv4{
     width: 350px;
     text-align: center;
@@ -46,9 +61,13 @@ body{
     padding: 4%;
     font-family: "Rubik";
     font-weight: 100;
-    height: 570px;
+    
     box-shadow: 2px 2px 17px 5px rgba(255,255,255,0.75);
     transition: transform 0.3s;
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 570px;
 }
 .homeDiv4:hover{
     transform: scale(1.05);
