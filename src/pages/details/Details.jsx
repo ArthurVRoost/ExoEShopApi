@@ -1,9 +1,10 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './details.css'
 import Nav from '../../components/nav/Nav';
 import Footer from '../../components/footer/Footer';
+
 export default function Details() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
@@ -26,6 +27,10 @@ export default function Details() {
     return (
         <>
         <Nav/>
+        <div className='retour'>
+            <Link className='link' to='/produits'><p className='fleche'>&larr;</p></Link>
+        </div>
+        
         <div className='divDetails'>
             <h1 className='detailsH1'>{product.title}</h1>
             <img className='detailsImg' src={product.image} alt={product.title} style={{ height: '400px', objectFit: 'contain' }} />

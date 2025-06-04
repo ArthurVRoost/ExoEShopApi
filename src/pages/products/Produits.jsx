@@ -31,6 +31,9 @@ export default function Produits() {
     return (
         <>
             <Nav/>
+            <div className='retour'>
+                <Link className='link' to='/'><p className='fleche'>&larr;</p></Link>
+            </div>
             <div className='divProduits'>
                 <h1 className='prodtuisTitre'>Tous nos produits</h1>
                 <div className='test'>
