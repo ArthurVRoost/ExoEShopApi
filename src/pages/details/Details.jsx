@@ -26,13 +26,16 @@ export default function Details() {
     return (
         <>
         <Nav/>
-        <div>
-            <h1>{product.title}</h1>
-            <img src={product.image} alt={product.title} />
-            <p>{product.description}</p>
-            <p>Prix: {product.price}€</p>
-            <p>Catégorie: {product.category}</p>
-            <p>Note: {product.rating.rate}/5</p>
+        <div className='divDetails'>
+            <h1 className='detailsH1'>{product.title}</h1>
+            <img className='detailsImg' src={product.image} alt={product.title} style={{ height: '400px', objectFit: 'contain' }} />
+            <div className='divDescri'>   
+                <p className='detailsP1'>{product.description}</p>
+            </div>
+            
+            <p className='detailsP2'>Prix: {product.price}€</p>
+            <p className='detailsP3'>Catégorie: {product.category}</p>
+            <p className='detailsP4'>Note: <span className='text-warning'>{product.rating.rate}/5</span></p>
         </div>
         <Footer/>
         </>
