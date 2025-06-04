@@ -5,16 +5,17 @@
 }
 .navP{
     font-size: 22px;
-    color: black;
+    color: rgba(0, 0, 0, 0.762);
     margin-top: 2%;
     font-family: "Rubik";
     font-style: italic;
+    font-weight: 100;
 }
 .divNav{
     display: flex;
     justify-content: center;
     gap: 100px;
-    background-color: rgb(234, 232, 232);
+    background-color: rgb(219, 216, 216);
     align-items: center;
     padding-top: 1%;
 }
