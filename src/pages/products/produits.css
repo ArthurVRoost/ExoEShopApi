@@ -62,3 +62,8 @@
     padding: 10px 15px;
     border-radius: 50%;
 }
+@media (max-width:768px) {
+    .retour{
+        display: none;
+    }
+}

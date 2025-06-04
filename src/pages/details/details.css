@@ -26,3 +26,8 @@
     font-weight: 100;
     font-size: 35px;
 }
+@media (max-width:768px) {
+    .retour{
+        display: none;
+    }
+}
