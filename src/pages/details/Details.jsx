@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './details.css'
@@ -6,6 +6,7 @@ import Nav from '../../components/nav/Nav';
 import Footer from '../../components/footer/Footer';
 
 export default function Details() {
+    const navigate = useNavigate()
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -28,7 +29,7 @@ export default function Details() {
         <>
         <Nav/>
         <div className='retour'>
-            <Link className='link' to='/produits'><p className='fleche'>&larr;</p></Link>
+            <p onClick={()=>navigate(-1)} className='fleche'>&larr;</p>
         </div>
         
         <div className='divDetails'>

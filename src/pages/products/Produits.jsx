@@ -2,13 +2,14 @@ import './produits.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Nav from '../../components/nav/Nav';
 import Footer from '../../components/footer/Footer';
 
 export default function Produits() {
+    const navigate = useNavigate()
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -27,12 +28,12 @@ export default function Produits() {
 
     if (loading) return <div>Chargement...</div>;
     if (error) return <div>{error}</div>;
-    
+   
     return (
         <>
             <Nav/>
             <div className='retour'>
-                <Link className='link' to='/'><p className='fleche'>&larr;</p></Link>
+                <p onClick={()=>navigate(-1)} className='fleche'>&larr;</p>
             </div>
             <div className='divProduits'>
                 <h1 className='prodtuisTitre'>Tous nos produits</h1>

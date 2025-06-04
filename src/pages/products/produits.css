@@ -26,9 +26,7 @@
     background-color: white;
     transition: transform 0.3s ease;
 }
-.produitsDiv1:hover{
-    transform: scale(1.05);
-}
+
 .produitsH3{
     font-size: 20px;
 }
@@ -39,10 +37,12 @@
     color: white;
     padding: 10px 20px;
     margin-top: auto;
+    transition: transform 0.3s ease;
 }
 .produitsBtn:hover{
     background-color: grey;
     color: black;
+    transform: scale(1.1);
 }
 .produitsContentBas {
   margin-top: auto; 
@@ -61,9 +61,12 @@
     background-color: white;
     padding: 10px 15px;
     border-radius: 50%;
+    cursor: pointer;
 }
 @media (max-width:768px) {
     .retour{
-        display: none;
+        position: absolute;
+        top: 10px;
+        left: 30px;
     }
 }
